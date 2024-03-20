@@ -1,0 +1,88 @@
+// Заголовки, общие БЄМ блоки и проче...
+body {
+    background-color: #f8f9ff;
+}
+h1, h2 {
+    font-size: rem(64);
+    font-weight: 700;
+    line-height: 120%;
+    @media(max-width:1150px){
+        font-size: rem(56);
+    }
+    @media(max-width:750px){
+        @include adaptiveClamp(font-size, 64, 32);
+    }
+
+}
+h2 {
+    text-align: center;
+    margin-bottom: rem(48);
+    @media(max-width:500px){
+        margin-bottom: rem(32);
+    }
+}
+section {
+    padding-top: rem(80);
+    @media(max-width:1150px){
+        @include adaptiveClamp(padding-top, 64, 40);
+    }
+}
+p {
+    color: #353d57;
+    line-height: 150%;
+}
+
+.button {
+    padding: rem(16) rem(40);
+    background-color: #2667ff;
+    color: var(--white-color);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease  0s;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(24);
+    text-align: center;
+    @media(max-width:500px){
+        @include adaptiveClamp(font-size, 24, 16);
+    }
+}
+
+
+.input {
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        input {
+            display: none;
+        }
+    }
+
+    &__file {
+    }
+    // display: none;
+    &__file-label {
+        display: inline-flex;
+        justify-content: center;
+        gap: rem(6.5);
+        cursor: pointer;
+    }
+    &__file-icon {
+       
+    }
+    &__file-text{
+        color: var(--primary);
+        font-weight: 700;
+        font-size: rem(30);
+        line-height: 100%;
+        transition: all 0.3s ease  0s; 
+    }
+}
+
+
+textarea {
+    resize: none;
+}
