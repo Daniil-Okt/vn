@@ -386,3 +386,47 @@ if (formAll.length > 0) {
 	});
 }
 
+
+
+// Получаем все элементы с классом item-services__head
+const heads = document.querySelectorAll('.item-services__head');
+
+// Для каждого элемента с классом item-services__head добавляем обработчик клика
+heads.forEach(head => {
+	head.addEventListener('click', () => {
+		// Находим следующий элемент с классом item-services__body
+		const body = head.nextElementSibling;
+		head.classList.toggle('active');
+		// Проверяем, есть ли следующий элемент и добавляем/удаляем класс для отображения
+		if (body && body.classList.contains('item-services__body')) {
+			body.classList.toggle('active');
+		}
+	});
+});
+
+//
+const headsOption = document.querySelectorAll('.option-services__head');
+
+// Для каждого элемента с классом item-services__head добавляем обработчик клика
+headsOption.forEach(head => {
+	head.addEventListener('click', () => {
+		const body = head.nextElementSibling;
+		head.classList.toggle('active');
+		if (body && body.classList.contains('option-services__row')) {
+			body.classList.toggle('active');
+		}
+	});
+});
+
+const headsEffectiv = document.querySelectorAll('.effectiv-item__head');
+
+// Для каждого элемента с классом item-services__head добавляем обработчик клика
+headsEffectiv.forEach(head => {
+	head.addEventListener('click', () => {
+		const body = head.nextElementSibling;
+		head.classList.toggle('active');
+		if (body && body.classList.contains('effectiv-item__body')) {
+			body.classList.toggle('active');
+		}
+	});
+});
