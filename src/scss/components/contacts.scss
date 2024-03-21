@@ -1,0 +1,94 @@
+.contacts {
+    padding-bottom: rem(80);
+    @media(max-width:1150px){
+        padding-bottom: rem(64);
+    }
+    @media(max-width:650px){
+        padding-bottom: rem(24);
+        row-gap: rem(40);
+    }
+    &__container {  
+    }
+    &__title {
+        text-align: left;
+    }
+    &__row {
+        display: flex;
+        gap: rem(48);
+        max-width: rem(1329);
+        justify-content: space-between;
+        padding-bottom: rem(72);
+        border-bottom: 2px solid var(--blue-light-2);
+        @media(max-width:1150px){
+            row-gap: rem(72);
+            flex-wrap: wrap;
+        }
+        @media(max-width:650px){
+            padding-bottom: rem(24);
+            row-gap: rem(32);
+        }
+    }
+    &__row-item {
+        display: flex;
+        flex-direction: column;
+        gap: rem(48);
+        @media(max-width:650px){
+            row-gap: rem(32);
+        }
+    }
+    &__item {
+    }
+
+    &__sub-text {
+        font-size: rem(24);
+        margin-bottom: rem(16);
+        @media(max-width:650px){
+            font-size: rem(16);
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: rem(48);
+        line-height: 150%;
+        color: #03347e;
+        @media(max-width:1150px){
+            font-size: rem(40);
+        }
+        @media(max-width:650px){
+            font-size: rem(24);
+        }
+    }
+    a.contacts__link {
+        transition: all 0.3s ease  0s;
+        cursor: pointer;
+        &:hover {
+            color: #0244a5;
+        }
+    }
+
+    &__social {
+        margin-top: rem(48);
+        display: flex;
+        gap: rem(64);
+        @media(max-width:450px){
+            justify-content: space-between;
+        }
+        a {
+            font-weight: 700;
+            font-size: rem(32);
+            line-height: 150%;
+            color: #2667ff;
+            transition: all 0.3s ease  0s;
+            &:hover {
+                color: #0048f1;
+            }
+            @media(max-width:1150px){
+                font-size: rem(24);
+            }
+            @media(max-width:650px){
+                font-size: rem(16);
+            }
+        }
+    }
+}

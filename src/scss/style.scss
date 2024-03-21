@@ -44,7 +44,7 @@
 * Модули используемые в проекте
 * Раскоментировать для использования
 */
-// @import 'modules-scss/popup';
+@import 'modules-scss/popup';
 // @import 'modules-scss/checkbox';
 // @import 'modules-scss/tabs';
 // @import 'modules-scss/accordion';
@@ -58,5 +58,6 @@
 @import 'components/indicator';
 @import 'components/cost';
 @import 'components/form';
+@import 'components/contacts';
 
 @import 'components/footer';

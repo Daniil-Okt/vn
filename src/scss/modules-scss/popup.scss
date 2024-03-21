@@ -39,9 +39,9 @@
     margin: 0 auto;
 
     /** Установить свои значения */
-    padding: rem(30) rem(50);
+    // padding: rem(30) rem(50);
     max-width: rem(690);
-    background-color: $white-100;
+    // background-color: $white-100;
     transform: translateY(rem(-200));
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -54,13 +54,26 @@
     /** Установить свои значения */
     top: rem(20);
     right: rem(20);
-    width: rem(40);
-    height: rem(40);
+    width: rem(30);
+    height: rem(30);
     display: flex;
     justify-content: center;
     align-items: center;
     background: transparent;
     color: #000;
     border-radius: rem(8);
+    cursor: pointer;
+    svg {
+      width: 100%;
+    }
+    @media(max-width:750px){
+      top: rem(10);
+      right: rem(10);
+    }
+  }
+  .form__body {
+    @media(max-width:750px){
+        padding-top: rem(50);
+    }
   }
 }

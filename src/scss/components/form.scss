@@ -92,24 +92,7 @@
             padding: rem(16) rem(24);
         }
     }
-    textarea {
-        border: 2px solid var(--grey-light);
-        border-radius: 10px;
-        padding: rem(24) rem(32);
-        width: 100%;
-        font-size: rem(20);
-        font-weight: 700;
-        color: var(--primary);
-        transition: all 0.3s ease  0s;
-        min-height: rem(200);
-        &:focus {
-            border: 2px solid var(--primary);
-        }
-        &::placeholder {
-            text-transform: uppercase;
-            color: var(--grey);
-        }
-    }
+   
     &__item-checkbox {
 
     }
@@ -168,7 +151,7 @@
                 width: rem(20);
                 height: rem(20);
                 left: 0;
-                top: 0;
+                top: 0
             }
             padding-left: rem(30);
             height: rem(20);
@@ -207,10 +190,22 @@
     &__file-button {
     }
 }
-.label {
 
-    &__label-checkbox {
+textarea {
+    border: 2px solid var(--grey-light);
+    border-radius: 10px;
+    padding: rem(24) rem(32);
+    width: 100%;
+    font-size: rem(20);
+    font-weight: 700;
+    color: var(--primary);
+    transition: all 0.3s ease  0s;
+    min-height: rem(200);
+    &:focus {
+        border: 2px solid var(--primary);
     }
-}
-.button {
+    &::placeholder {
+        text-transform: uppercase;
+        color: var(--grey);
+    }
 }
