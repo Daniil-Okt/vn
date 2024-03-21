@@ -71,6 +71,9 @@
         margin-top: rem(48);
         display: flex;
         gap: rem(64);
+        @media(max-width:650px){
+            margin-top: rem(24);
+        }
         @media(max-width:450px){
             justify-content: space-between;
         }
