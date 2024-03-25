@@ -1,10 +1,10 @@
 <?php 
-$site = '#ВНКОНТРОЛ';
+$site = 'c';
 $titleForm = $_POST['title'];
 $name = $_POST['name'];
-$phone = $_POST['tel'];
+$phone = $_POST['phone'];
 $email = $_POST['email'];
-$text = $_POST['text'];
+$question = $_POST['question'];
 
 // ОТПРАВКА НА ПОЧТУ
 // ==================================================================================================================
@@ -30,7 +30,7 @@ $body = "
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br>
 <b>E-mail:</b> $email<br>
-<b>Вопрос:</b> $text<br>
+<b>Вопрос:</b> $question<br>
 <b>Файл:</b> $file<br>
 ";
 // Настройки PHPMailer
@@ -48,10 +48,10 @@ try {
     $mail->Password   = '6W1EU4RUb7ptcmCvtHCQ';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('web-prog-dn@mail.ru', 'GILDIA'); 
+    $mail->setFrom('web-prog-dn@mail.ru', '#ВНКОНТРОЛ'); 
     // Получатель письма
     $mail->addAddress('danikoktysyk@gmail.com'); 
-    $mail->addAddress('vncontrol1@gmail.com'); 
+    // $mail->addAddress('vncontrol1@gmail.com'); 
     
     // Опционально, прикрепите файл к письму
     $mail->addAttachment($upload_file);
