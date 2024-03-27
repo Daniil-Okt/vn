@@ -42,10 +42,10 @@ try {
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    $mail->Host       = 'smtp.mail.ru'; 
-    $mail->Username   = 'web-prog-dn@mail.ru'; 
+    $mail->Host       = 'smtp.gmail.com'; 
+    $mail->Username   = 'noreplyVNCONTROL@gmail.com'; 
     // 
-    $mail->Password   = '6W1EU4RUb7ptcmCvtHCQ';
+    $mail->Password   = 'vmncimecbcaxfgmm';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('web-prog-dn@mail.ru', '#ВНКОНТРОЛ'); 
@@ -75,7 +75,7 @@ try {
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+echo json_encode(["result" => $result, "resultfile" => $file, "status" => $status]);
 
 if ($sendToTelegram) {$result = "success";} 
 else {$result = "error";}
