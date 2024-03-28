@@ -50,8 +50,7 @@ try {
     $mail->Port       = 465;
     $mail->setFrom('web-prog-dn@mail.ru', '#ВНКОНТРОЛ'); 
     // Получатель письма
-    $mail->addAddress('danikoktysyk@gmail.com'); 
-    // $mail->addAddress('vncontrol1@gmail.com'); 
+    $mail->addAddress('vncontrol1@gmail.com'); 
     
     // Опционально, прикрепите файл к письму
     $mail->addAttachment($upload_file);
